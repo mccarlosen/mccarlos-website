@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', Saira, sans-serif;
+}
+
+.content {
+  width: 100%;
+}
+
+.active-link {
+  @apply bg-color-2 text-color-3 border-2 border-color-1 rounded-full px-4 py-1 mr-4;
+  &:hover {
+    @apply bg-color-2;
+  }
+}
+/* stylelint-disable no-descending-specificity */
+.article,
+.post-details {
+  h1 {
+    @apply font-saira font-bold leading-10 text-2xl mb-4;
+    strong {
+      @apply font-saira font-bold leading-10 text-2xl mb-4;
+    }
+  }
+  h3 {
+    @apply font-saira font-bold leading-10 text-xl mb-2;
+  }
+  ul {
+    @apply font-light list-disc list-inside mb-2;
+    a {
+      @apply text-blue-700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    @apply font-light mb-6;
+    img {
+      @apply rounded-md shadow-md;
+    }
+    a {
+      @apply text-blue-700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
