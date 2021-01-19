@@ -1,5 +1,5 @@
 <template>
-  <div class="post-details pb-24">
+  <div class="post-details">
     <div class="font-saira font-medium leading-9 text-3xl mb-3 lg:leading-10">
       {{ post.data.title[0].text }}
     </div>

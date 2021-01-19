@@ -1,10 +1,7 @@
 <template>
   <section>
     <article>
-      <div
-        class="mb-10 article pb-48"
-        v-html="$prismic.asHtml(about.content)"
-      ></div>
+      <div class="mb-10 article" v-html="$prismic.asHtml(about.content)"></div>
     </article>
   </section>
 </template>

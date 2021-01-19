@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center mx-auto pb-40">
+  <div class="flex flex-col items-center mx-auto">
     <img
       src="../assets/images/logo-carlos-meneses-iniciales.svg"
       alt="Logo Iniciales Carlos Meneses"

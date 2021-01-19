@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full font-body">
-    <div class="container pt-12 px-8 lg:px-24 xl:px-40 2xl:px-84">
+    <div class="container pt-12 px-8 lg:px-24 xl:px-40 2xl:px-84 pb-40">
       <header
         class="flex flex-col justify-between items-center mb-16 md:flex-row"
         :class="{ 'md:mb-24 lg:mb-32': !showLogo, 'lg:mb-16': showLogo }"

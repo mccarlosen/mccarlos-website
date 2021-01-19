@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-48">
+  <div>
     <div v-for="(c, id) in creations.data.body" :key="id" class="mb-12">
       <h2 class="font-saira font-bold text-2xl mb-10">
         {{ c.primary.title[0].text }}
