@@ -25,13 +25,16 @@ html {
 .article,
 .post-details {
   h1 {
-    @apply font-saira font-bold leading-10 text-2xl mb-4;
+    @apply font-saira font-medium leading-10 text-3xl mb-4;
     strong {
-      @apply font-saira font-bold leading-10 text-2xl mb-4;
+      @apply font-saira font-medium leading-10 text-3xl mb-4;
     }
   }
   h3 {
-    @apply font-saira font-bold leading-10 text-xl mb-2;
+    @apply font-saira font-medium leading-10 text-2xl mb-2;
+    strong {
+      font-weight: normal;
+    }
   }
   ul {
     @apply font-light list-disc list-inside mb-2;
@@ -43,7 +46,7 @@ html {
     }
   }
   p {
-    @apply font-light mb-6;
+    @apply text-base font-light mb-6;
     img {
       @apply rounded-md shadow-md;
     }
@@ -54,4 +57,126 @@ html {
       }
     }
   }
+}
+// @media (min-width: 640px) and (orientation: landscape) {
+//   .container {
+//     padding-right: 6rem;
+//     padding-left: 6rem;
+//   }
+// }
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .container {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+
+#icon-open-menu {
+  width: 45px;
+  height: 35px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#icon-open-menu span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background: #cacaca;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#icon-open-menu span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#icon-open-menu span:nth-child(odd) {
+  left: 0;
+  border-radius: 9px 0 0 9px;
+}
+
+#icon-open-menu span:nth-child(1),
+#icon-open-menu span:nth-child(2) {
+  top: 0;
+}
+
+#icon-open-menu span:nth-child(3),
+#icon-open-menu span:nth-child(4) {
+  top: 15px;
+}
+
+#icon-open-menu span:nth-child(5),
+#icon-open-menu span:nth-child(6) {
+  top: 30px;
+}
+
+#icon-open-menu.open span:nth-child(1),
+#icon-open-menu.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#icon-open-menu.open span:nth-child(2),
+#icon-open-menu.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#icon-open-menu.open span:nth-child(1) {
+  left: 5px;
+  top: 7px;
+}
+
+#icon-open-menu.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#icon-open-menu.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#icon-open-menu.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#icon-open-menu.open span:nth-child(5) {
+  left: 5px;
+  top: 20px;
+}
+
+#icon-open-menu.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 20px;
 }

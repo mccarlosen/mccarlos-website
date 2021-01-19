@@ -1,40 +1,63 @@
 <template>
   <div class="h-full w-full">
-    <div class="container pt-16">
-      <header class="flex justify-between items-center mb-24">
+    <div class="container pt-12 px-8 lg:px-24 xl:px-40 2xl:px-84">
+      <header
+        class="flex flex-col justify-between items-center mb-16 md:flex-row"
+        :class="{ 'md:mb-24 lg:mb-32': !showLogo, 'lg:mb-16': showLogo }"
+      >
+        <!-- nav -->
         <nav
-          class="flex items-center text-lg text-color-1 font-saira tracking-tighter"
+          :class="[
+            'w-full flex items-center justify-end text-lg text-color-1 font-saira tracking-tighter mb-8 md:w-auto md:mb-0',
+            { 'justify-between': showLogo },
+          ]"
         >
-          <img
-            v-if="showLogo"
-            src="../assets/images/logo-carlos-meneses-iniciales.svg"
-            alt="Logo Iniciales Carlos Meneses"
-            class="w-16 mr-10"
-          />
-          <NuxtLink
-            class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4"
-            exact-active-class="active-link"
-            to="/"
-            >Inicio</NuxtLink
+          <NuxtLink to="/">
+            <img
+              v-if="showLogo"
+              src="../assets/images/logo-carlos-meneses-iniciales.svg"
+              alt="Logo Iniciales Carlos Meneses"
+              class="w-20 mr-5 md:mr-3 lg:mr-5 xl:mr-6 2xl:mr-7"
+            />
+          </NuxtLink>
+          <div class="items-center hidden md:flex">
+            <NuxtLink
+              class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
+              exact-active-class="active-link"
+              to="/"
+              >Inicio</NuxtLink
+            >
+            <NuxtLink
+              class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
+              exact-active-class="active-link"
+              to="/acerca-de-mi"
+              >Acerca de mi</NuxtLink
+            >
+            <NuxtLink
+              class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
+              exact-active-class="active-link"
+              to="/publicaciones"
+              >Posts</NuxtLink
+            >
+            <NuxtLink
+              class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1"
+              exact-active-class="active-link"
+              to="/creaciones"
+              >Creaciones</NuxtLink
+            >
+          </div>
+          <div
+            id="icon-open-menu"
+            :class="['fixed z-20 md:hidden', { open: openMenu }]"
+            @click="toggleOpen"
           >
-          <NuxtLink
-            class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4"
-            exact-active-class="active-link"
-            to="/acerca-de-mi"
-            >Acerca de mi</NuxtLink
-          >
-          <NuxtLink
-            class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4"
-            exact-active-class="active-link"
-            to="/publicaciones"
-            >Posts</NuxtLink
-          >
-          <NuxtLink
-            class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1"
-            exact-active-class="active-link"
-            to="/creaciones"
-            >Creaciones</NuxtLink
-          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
         <!-- redes -->
         <div class="flex">
@@ -90,10 +113,59 @@
             </svg>
           </a>
         </div>
+        <!-- drawer sidebar -->
+        <div
+          v-show="openMenu"
+          class="z-10 fixed inset-0 transition-opacity"
+          @click="toggleOpen"
+        >
+          <div tabindex="0" class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
       </header>
       <div class="content">
         <Nuxt />
       </div>
+      <aside
+        :class="[
+          'transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 shadow-md',
+          { 'translate-x-0': openMenu, '-translate-x-full': !openMenu },
+        ]"
+      >
+        <div class="px-10 py-10 flex flex-col font-saira tracking-tighter">
+          <NuxtLink to="/">
+            <img
+              v-if="showLogo"
+              src="../assets/images/logo-carlos-meneses-iniciales.svg"
+              alt="Logo Iniciales Carlos Meneses"
+              class="w-20 mb-5"
+            />
+          </NuxtLink>
+          <NuxtLink
+            class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
+            exact-active-class="active-link"
+            to="/"
+            >Inicio</NuxtLink
+          >
+          <NuxtLink
+            class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
+            exact-active-class="active-link"
+            to="/acerca-de-mi"
+            >Acerca de mi</NuxtLink
+          >
+          <NuxtLink
+            class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
+            exact-active-class="active-link"
+            to="/publicaciones"
+            >Posts</NuxtLink
+          >
+          <NuxtLink
+            class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1"
+            exact-active-class="active-link"
+            to="/creaciones"
+            >Creaciones</NuxtLink
+          >
+        </div>
+      </aside>
     </div>
   </div>
 </template>
@@ -103,20 +175,36 @@ export default {
   data() {
     return {
       showLogo: false,
+      openMenu: false,
     }
   },
   watch: {
     $route() {
       this.showLogo = false
+      this.openMenu = false
       if (this.$route.path !== '/') {
         this.showLogo = true
       }
+    },
+    openMenu: {
+      immediate: true,
+      handler(openMenu) {
+        if (process.client) {
+          if (openMenu) document.body.style.setProperty('overflow', 'hidden')
+          else document.body.style.removeProperty('overflow')
+        }
+      },
     },
   },
   mounted() {
     if (this.$route.path !== '/') {
       this.showLogo = true
     }
+  },
+  methods: {
+    toggleOpen() {
+      this.openMenu = !this.openMenu
+    },
   },
 }
 </script>

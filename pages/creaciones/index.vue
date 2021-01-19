@@ -1,19 +1,21 @@
 <template>
   <div class="pb-48">
-    <div v-for="(c, id) in creations.data.body" :key="id" class="mb-24">
+    <div v-for="(c, id) in creations.data.body" :key="id" class="mb-12">
       <h2 class="font-saira font-bold text-2xl mb-10">
         {{ c.primary.title[0].text }}
       </h2>
-      <div v-for="(item, index) in c.items" :key="index" class="flex mb-8">
-        <div class="w-1/4 mr-6">
+      <div v-for="(item, index) in c.items" :key="index" class="mb-8 md:flex">
+        <div class="w-full mb-4 md:w-2/5 md:mr-4 lg:mr-8">
           <img
-            class="object-cover rounded-md shadow-md"
+            class="object-cover object-center inset-0 border border-gray-200 rounded-md shadow-md w-full h-full"
             :src="item.image.url"
             alt=""
           />
         </div>
-        <div class="w-3/4 flex flex-col">
-          <div class="text-2xl font-saira font-medium leading-7 mb-2">
+        <div class="flex flex-col md:w-3/5">
+          <div
+            class="text-2xl font-saira font-medium leading-8 mb-4 lg:text-3xl lg:leading-10"
+          >
             {{ item.title[0].text }}
           </div>
           <div

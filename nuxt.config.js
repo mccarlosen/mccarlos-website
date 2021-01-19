@@ -18,9 +18,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    '~/assets/sass/main.scss'
-  ],
+  css: ['~/assets/sass/main.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -46,15 +44,20 @@ export default {
   ],
   // Prismic
   prismic: {
-    endpoint: "https://mccarlos.cdn.prismic.io/api/v2",
+    endpoint: 'https://mccarlos.cdn.prismic.io/api/v2',
     linkResolver: '~/plugins/link-resolver',
-    htmlSerializer: '~/plugins/html-serializer'
+    htmlSerializer: '~/plugins/html-serializer',
   },
 
   generate: {
-    fallback: "404.html"
+    fallback: '404.html',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  // server
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 }

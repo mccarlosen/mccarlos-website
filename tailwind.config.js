@@ -8,29 +8,35 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}'
+    './nuxt.config.{js,ts}',
   ],
   darkMode: false,
   theme: {
     screens: {
-      'tablet': '640px',
+      sm: '640px',
       // => @media (min-width: 640px) { ... }
 
-      'laptop': '1024px',
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '800px',
+      xl: '1280px',
       // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
     container: {
       center: true,
-      padding: '3.5em'
+      padding: '3.5em',
     },
     extend: {
       spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
+        72: '18rem',
+        84: '21rem',
+        96: '24rem',
       },
       colors: {
         'color-1': '#0A1612',
@@ -41,7 +47,7 @@ module.exports = {
         'color-6': '#FF0000',
         'color-7': '#E90000',
         'color-8': '#FFF7D1',
-      }
+      },
     },
     fontFamily: {
       saira: ['Saira', 'sans-serif'],
