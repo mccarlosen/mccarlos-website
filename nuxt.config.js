@@ -16,7 +16,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Carlos Meneses es un desarrollador web. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
+          'Carlos es un desarrollador web full-stack. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
       },
       {
         hid: 'og:site_name',
