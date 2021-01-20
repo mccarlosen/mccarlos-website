@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      title: 'Carlos Meneses - ' + this.post.data.title[0].text,
+      title: this.post.data.title[0].text,
       meta: [
         {
           hid: 'og:url',

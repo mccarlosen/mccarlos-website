@@ -44,7 +44,7 @@ export default {
   },
   head() {
     return {
-      title: 'Carlos Meneses - Categoría: ' + this.category,
+      title: 'Categoría: ' + this.category,
       meta: [
         {
           hid: 'og:url',
@@ -54,7 +54,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Carlos Meneses - Categoría: ' + this.category,
+          content: 'Categoría: ' + this.category,
         },
         {
           hid: 'og:description',

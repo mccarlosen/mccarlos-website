@@ -22,7 +22,7 @@ export default {
   },
   head() {
     return {
-      title: 'Carlos Meneses - Acerca de mi',
+      title: 'Acerca de mi',
       meta: [
         {
           hid: 'og:url',
@@ -32,7 +32,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Carlos Meneses - Acerca de mi',
+          content: 'Acerca de mi',
         },
         {
           hid: 'og:description',
