@@ -43,11 +43,24 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Carlos Meneses - ' + this.post.data.title[0].text,
+          content: this.post.data.title[0].text,
         },
         {
           hid: 'og:description',
           property: 'og:description',
+          content: this.truncate(
+            this.$prismic.asText(this.post.data.content),
+            250
+          ),
+        },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: this.post.data.title[0].text,
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
           content: this.truncate(
             this.$prismic.asText(this.post.data.content),
             250
