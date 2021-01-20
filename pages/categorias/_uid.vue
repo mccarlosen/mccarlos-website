@@ -63,6 +63,18 @@ export default {
             'Estos son mis artículos publicados en la categoría de ' +
             this.category,
         },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Categoría: ' + this.category,
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          content:
+            'Estos son mis artículos publicados en la categoría de ' +
+            this.category,
+        },
       ],
     }
   },

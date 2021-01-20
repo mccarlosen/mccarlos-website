@@ -58,6 +58,17 @@ export default {
           content:
             'En este espacio se encontrarás mis publicaciones en diferentes temas como Laravel, Livewire, Vue, React.',
         },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Publicaciones',
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          content:
+            'En este espacio se encontrarás mis publicaciones en diferentes temas como Laravel, Livewire, Vue, React.',
+        },
       ],
     }
   },

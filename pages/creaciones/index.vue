@@ -60,6 +60,17 @@ export default {
           content:
             'Estas son algunas de mis creaciones y proyectos en los que trabajado hasta ahora.',
         },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Creaciones',
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          content:
+            'Estas son algunas de mis creaciones y proyectos en los que trabajado hasta ahora.',
+        },
       ],
     }
   },

@@ -24,6 +24,11 @@ export default {
         content: 'Carlos Meneses',
       },
       {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://carlosmeneses.com',
+      },
+      {
         hid: 'og:title',
         property: 'og:title',
         content: 'Carlos Meneses',
@@ -35,18 +40,29 @@ export default {
           'Carlos Meneses es un desarrollador web. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
       },
       {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'http://carlosmeneses.com',
-      },
-      {
         hid: 'og:image',
         property: 'og:image',
-        content: 'http://carlosmeneses.com/profile.jpg',
+        content: 'https://carlosmeneses.com/profile.jpg',
+      },
+      {
+        hid: 'twitter:title',
+        property: 'twitter:title',
+        content: 'Carlos Meneses',
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        content:
+          'Carlos Meneses es un desarrollador web. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: 'https://carlosmeneses.com/profile.jpg',
       },
       {
         property: 'twitter:card',
-        content: 'summary',
+        content: 'summary_large_image',
       },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },

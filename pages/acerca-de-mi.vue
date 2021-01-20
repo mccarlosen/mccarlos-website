@@ -39,6 +39,16 @@ export default {
           property: 'og:description',
           content: this.truncate(this.$prismic.asText(this.about.content), 250),
         },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Acerca de mi',
+        },
+        {
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          content: this.truncate(this.$prismic.asText(this.about.content), 250),
+        },
       ],
     }
   },
