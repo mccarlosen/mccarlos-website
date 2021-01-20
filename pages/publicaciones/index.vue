@@ -1,5 +1,9 @@
 <template>
   <div class="post-list">
+    <div v-if="!posts.results.length" class="font-light text-gray-600">
+      No hay publicaciones en esta sección
+    </div>
+
     <div v-for="(post, index) in posts.results" :key="index" class="post mb-6">
       <div class="font-saira font-light text-base text-gray-600 mb-1">
         {{ post.data.date | formatDate }} -
