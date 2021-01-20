@@ -37,7 +37,7 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Carlos es un desarrollador web. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
+          'Carlos es un desarrollador web full-stack. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
       },
       {
         hid: 'og:image',
@@ -53,7 +53,7 @@ export default {
         hid: 'twitter:description',
         property: 'twitter:description',
         content:
-          'Carlos es un desarrollador web. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
+          'Carlos es un desarrollador web full-stack. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.',
       },
       {
         hid: 'twitter:image',
