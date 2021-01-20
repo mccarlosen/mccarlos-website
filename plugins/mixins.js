@@ -1,6 +1,11 @@
 import moment from 'moment'
 
 export default {
+  methods: {
+    truncate(value, length) {
+      return value.length > length ? value.substr(0, length) + '...' : value
+    },
+  },
   filters: {
     formatDate(date) {
       if (date) {

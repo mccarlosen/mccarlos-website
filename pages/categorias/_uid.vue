@@ -42,5 +42,30 @@ export default {
       error({ statusCode: 404, message: 'Página no encontrada' })
     }
   },
+  head() {
+    return {
+      title: 'Carlos Meneses - Categoría: ' + this.category,
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            location.protocol + '//' + location.hostname + this.$route.path,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Carlos Meneses - Categoría: ' + this.category,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Estos son mis artículos publicados en la categoría de ' +
+            this.category,
+        },
+      ],
+    }
+  },
 }
 </script>

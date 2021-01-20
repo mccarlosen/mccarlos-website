@@ -31,5 +31,31 @@ export default {
       error({ statusCode: 404, message: 'Página no encontrada' })
     }
   },
+  head() {
+    return {
+      title: 'Carlos Meneses - ' + this.post.data.title[0].text,
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            location.protocol + '//' + location.hostname + this.$route.path,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Carlos Meneses - ' + this.post.data.title[0].text,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.truncate(
+            this.$prismic.asText(this.post.data.content),
+            250
+          ),
+        },
+      ],
+    }
+  },
 }
 </script>

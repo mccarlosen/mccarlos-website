@@ -7,7 +7,9 @@
 </template>
 
 <script>
+import mixins from '../plugins/mixins'
 export default {
+  mixins: [mixins],
   async asyncData({ $prismic, error }) {
     try {
       const about = (await $prismic.api.getSingle('about')).data
@@ -16,6 +18,29 @@ export default {
       }
     } catch (e) {
       error({ statusCode: 404, message: 'Página no encontrada' })
+    }
+  },
+  head() {
+    return {
+      title: 'Carlos Meneses - Acerca de mi',
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            location.protocol + '//' + location.hostname + this.$route.path,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Carlos Meneses - Acerca de mi',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.truncate(this.$prismic.asText(this.about.content), 250),
+        },
+      ],
     }
   },
 }

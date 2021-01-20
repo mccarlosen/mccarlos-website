@@ -9,7 +9,7 @@
           <img
             class="object-cover object-center inset-0 border border-gray-200 rounded-md shadow-md w-full h-full"
             :src="item.image.url"
-            alt=""
+            :alt="item.image.alt"
           />
         </div>
         <div class="flex flex-col md:w-3/5">
@@ -38,6 +38,30 @@ export default {
       }
     } catch (e) {
       error({ statusCode: 404, message: 'Página no encontrada' })
+    }
+  },
+  head() {
+    return {
+      title: 'Carlos Meneses - Creaciones',
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            location.protocol + '//' + location.hostname + this.$route.path,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Carlos Meneses - Creaciones',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Estas son algunas de mis creaciones y proyectos en los que trabajado hasta ahora.',
+        },
+      ],
     }
   },
 }

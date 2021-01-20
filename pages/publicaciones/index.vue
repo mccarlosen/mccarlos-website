@@ -38,5 +38,29 @@ export default {
       error({ statusCode: 404, message: 'Página no encontrada' })
     }
   },
+  head() {
+    return {
+      title: 'Carlos Meneses - Publicaciones',
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            location.protocol + '//' + location.hostname + this.$route.path,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Carlos Meneses - Publicaciones',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'En este espacio se encontrarás mis publicaciones en diferentes temas como Laravel, Livewire, Vue, React.',
+        },
+      ],
+    }
+  },
 }
 </script>
