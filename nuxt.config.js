@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false, //'universal',
+  ssr: 'universal', //'universal',
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',

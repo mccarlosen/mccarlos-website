@@ -45,8 +45,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content:
-            location.protocol + '//' + location.hostname + this.$route.path,
+          content: 'https://carlosmeneses.com' + this.$route.path,
         },
         {
           hid: 'og:title',
