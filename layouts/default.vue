@@ -12,7 +12,7 @@
             { 'justify-between': showLogo },
           ]"
         >
-          <NuxtLink to="/">
+          <NuxtLink to="/" title="Página de inicio">
             <img
               v-if="showLogo"
               src="../assets/images/logo-carlos-meneses-iniciales.svg"
@@ -25,24 +25,28 @@
               class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
               exact-active-class="active-link"
               to="/"
+              title="Página de inicio"
               >Inicio</NuxtLink
             >
             <NuxtLink
               class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
               exact-active-class="active-link"
               to="/acerca-de-mi"
+              title="Página acerca de mi"
               >Acerca de mi</NuxtLink
             >
             <NuxtLink
               class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mr-4 md:mr-3"
               exact-active-class="active-link"
               to="/publicaciones"
+              title="Mis publicaciones"
               >Posts</NuxtLink
             >
             <NuxtLink
               class="rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1"
               exact-active-class="active-link"
               to="/creaciones"
+              title="Mis creaciones"
               >Creaciones</NuxtLink
             >
           </div>
@@ -140,7 +144,7 @@
         <div
           class="px-10 py-10 flex flex-col font-saira tracking-tighter dark:text-white"
         >
-          <NuxtLink to="/">
+          <NuxtLink to="/" title="Página de inicio">
             <img
               v-if="showLogo"
               src="../assets/images/logo-carlos-meneses-iniciales.svg"
@@ -152,24 +156,28 @@
             class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
             exact-active-class="active-link"
             to="/"
+            title="Página de inicio"
             >Inicio</NuxtLink
           >
           <NuxtLink
             class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
             exact-active-class="active-link"
             to="/acerca-de-mi"
+            title="Página acerca de mi"
             >Acerca de mi</NuxtLink
           >
           <NuxtLink
             class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1 mb-4"
             exact-active-class="active-link"
             to="/publicaciones"
+            title="Mis publicaciones"
             >Posts</NuxtLink
           >
           <NuxtLink
             class="w-full rounded-full transition duration-200 ease-in-out hover:bg-color-4 px-4 py-1"
             exact-active-class="active-link"
             to="/creaciones"
+            title="Mis creaciones"
             >Creaciones</NuxtLink
           >
         </div>
