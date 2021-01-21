@@ -3,7 +3,9 @@
 @import 'tailwindcss/utilities';
 
 body,
-html {
+html,
+#__nuxt,
+#__layout {
   width: 100%;
   height: 100%;
 }
@@ -63,13 +65,15 @@ html {
 // }
 
 @media (min-width: 768px) and (orientation: landscape) {
-  .container {
+  .container,
+  .footer {
     padding-right: 6rem;
     padding-left: 6rem;
   }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
-  .container {
+  .container,
+  .footer {
     padding-right: 6rem;
     padding-left: 6rem;
   }

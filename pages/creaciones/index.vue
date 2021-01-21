@@ -8,7 +8,7 @@
         {{ c.primary.title[0].text }}
       </h2>
       <div v-for="(item, index) in c.items" :key="index" class="mb-8 md:flex">
-        <div class="w-full mb-4 md:w-2/5 md:mr-4 lg:mr-8">
+        <div class="w-full h-56 mb-4 md:w-2/5 md:mr-4 lg:mr-8">
           <img
             class="object-cover object-center inset-0 border border-gray-200 rounded-md shadow-md w-full h-full"
             :src="item.image.url"

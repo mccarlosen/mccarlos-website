@@ -13,7 +13,8 @@ module.exports = {
       './nuxt.config.{js,ts}',
     ],
   },
-  darkMode: false,
+  whitelist: ['mode-dark'],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
@@ -57,6 +58,17 @@ module.exports = {
       body: ['Roboto', 'sans-serif'],
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    backgroundColor: [
+      'dark',
+      'dark-hover',
+      'dark-group-hover',
+      'dark-even',
+      'dark-odd',
+      'hover',
+    ],
+    borderColor: ['dark', 'dark-disabled', 'dark-focus', 'dark-focus-within'],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'dark-placeholder'],
+  },
+  plugins: [require('tailwindcss-dark-mode')()],
 }

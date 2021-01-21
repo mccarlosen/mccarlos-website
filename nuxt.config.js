@@ -42,7 +42,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://carlosmeneses.com/profile.jpg',
+        content: 'https://carlosmeneses.com/logo.jpg',
       },
       {
         hid: 'twitter:title',
@@ -58,7 +58,7 @@ export default {
       {
         hid: 'twitter:image',
         property: 'twitter:image',
-        content: 'https://carlosmeneses.com/profile.jpg',
+        content: 'https://carlosmeneses.com/logo.jpg',
       },
       {
         property: 'twitter:card',
@@ -102,6 +102,10 @@ export default {
       },
     ],
   },
+  // Google Analytics
+  googleAnalytics: {
+    id: 'G-1LMPPWEYNE',
+  },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/sass/main.scss'],
@@ -120,14 +124,14 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+    // https://google-analytics.nuxtjs.org/setup
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    '@nuxtjs/prismic',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-  ],
+  modules: ['@nuxtjs/prismic'],
   // Prismic
   prismic: {
     endpoint: 'https://mccarlos.cdn.prismic.io/api/v2',
