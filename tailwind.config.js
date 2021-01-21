@@ -42,6 +42,9 @@ module.exports = {
         84: '21rem',
         96: '24rem',
       },
+      lineHeight: {
+        12: '3rem',
+      },
       colors: {
         'color-1': '#0A1612',
         'color-2': '#1A2930',

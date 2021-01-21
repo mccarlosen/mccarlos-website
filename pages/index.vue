@@ -16,18 +16,18 @@
       </h1>
     </div>
     <span
-      class="font-saira font-medium text-lg mb-5 md:text-2xl lg:text-3xl lg:mb-8"
+      class="font-saira font-medium text-lg mb-4 md:text-2xl lg:text-3xl lg:mb-5"
       >{{ home.subtitle[0].text }}</span
     >
     <div
-      class="flex flex-wrap justify-center font-saira font-medium mb-5 lg:mb-10"
+      class="flex flex-wrap justify-center font-saira font-medium mb-4 lg:mb-5"
     >
       <NuxtLink
         v-for="(cat, id) in categories.results"
         :key="id"
         :to="`/categorias/${cat.uid}`"
         :class="[
-          'block text-color-3 uppercase text-sm leading-6 md:text-base lg:text-lg',
+          'block text-color-3 uppercase text-sm leading-12 md:text-base lg:text-lg',
           { 'ml-6': id > 0 },
         ]"
       >
