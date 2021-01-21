@@ -64,6 +64,7 @@
           <a
             class="bg-color-1 rounded-full p-2 mr-4"
             target="_blank"
+            rel="noopener"
             href="https://www.linkedin.com/in/mccarlos"
           >
             <svg
@@ -81,6 +82,7 @@
           <a
             class="bg-color-1 rounded-full p-2 mr-4"
             target="_blank"
+            rel="noopener"
             href="https://twitter.com/mccarlosen"
           >
             <svg
@@ -98,6 +100,7 @@
           <a
             class="bg-color-1 rounded-full p-2"
             target="_blank"
+            rel="noopener"
             href="https://github.com/mccarlosen"
           >
             <svg
