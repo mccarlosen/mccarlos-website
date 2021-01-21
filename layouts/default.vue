@@ -65,6 +65,7 @@
             class="bg-color-1 rounded-full p-2 mr-4"
             target="_blank"
             rel="noopener"
+            title="Mi perfil de linkedin"
             href="https://www.linkedin.com/in/mccarlos"
           >
             <svg
@@ -83,6 +84,7 @@
             class="bg-color-1 rounded-full p-2 mr-4"
             target="_blank"
             rel="noopener"
+            title="Mi perfil de twitter"
             href="https://twitter.com/mccarlosen"
           >
             <svg
@@ -101,6 +103,7 @@
             class="bg-color-1 rounded-full p-2"
             target="_blank"
             rel="noopener"
+            title="Mi perfil de github"
             href="https://github.com/mccarlosen"
           >
             <svg
