@@ -28,7 +28,7 @@
         :to="`/categorias/${cat.uid}`"
         :class="[
           'block text-color-3 uppercase text-sm leading-6 md:text-base lg:text-lg',
-          { 'ml-4': id > 0 },
+          { 'ml-6': id > 0 },
         ]"
       >
         #{{ cat.data.text }}

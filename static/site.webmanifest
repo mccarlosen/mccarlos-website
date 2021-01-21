@@ -1,6 +1,7 @@
 {
     "name": "Carlos Meneses - Desarrollador Web Full-Stack",
     "short_name": "Carlos Meneses",
+    "description": "Carlos es un desarrollador web full-stack. Diseña y programa aplicaciones web con Laravel, Livewire, Vue, React.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -11,8 +12,14 @@
             "src": "/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
+        },
+        {
+            "src": "/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
+    "start_url": "https://carlosmeneses.com",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
