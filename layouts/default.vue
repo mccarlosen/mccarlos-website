@@ -317,11 +317,12 @@ export default {
       this.openMenu = !this.openMenu
     },
     toggleDarkMode() {
-      this.darkMode = !this.darkMode
-      if (this.darkMode) {
+      if (this.$colorMode.preference === 'dark') {
         this.$colorMode.preference = 'light'
+        this.darkMode = false
       } else {
         this.$colorMode.preference = 'dark'
+        this.darkMode = true
       }
     },
   },
