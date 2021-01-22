@@ -8,6 +8,9 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    bodyAttrs: {
+      class: ['bg-white', 'dark:bg-gray-800', 'dark:text-white'],
+    },
     title: 'Carlos Meneses - Desarrollador Web Full-Stack',
     meta: [
       { charset: 'utf-8' },

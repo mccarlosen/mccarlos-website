@@ -295,9 +295,6 @@ export default {
     ) {
       this.darkMode = true
       document.querySelector('html').classList.add('mode-dark')
-      document.querySelector('body').classList.add('bg-white')
-      document.querySelector('body').classList.add('dark:bg-gray-800')
-      document.querySelector('body').classList.add('dark:text-white')
     } else {
       this.darkMode = false
       document.querySelector('html').classList.remove('mode-dark')
@@ -315,9 +312,6 @@ export default {
       this.darkMode = !this.darkMode
       if (this.darkMode) {
         document.querySelector('html').classList.add('mode-dark')
-        document.querySelector('body').classList.add('bg-white')
-        document.querySelector('body').classList.add('dark:bg-gray-800')
-        document.querySelector('body').classList.add('dark:text-white')
         localStorage.setItem('theme', 'mode-dark')
       } else {
         document.querySelector('html').classList.remove('mode-dark')
