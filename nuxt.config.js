@@ -116,6 +116,22 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
+  tailwindcss: {
+    // add '~tailwind.config` alias
+    exposeConfig: true,
+  },
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode',
+  },
+
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -125,8 +141,11 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/color-mode',
+
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://google-analytics.nuxtjs.org/setup
@@ -135,6 +154,11 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['@nuxtjs/prismic'],
+
+  lazyImage: {
+    defaultCss: true, // should defaultCSS be included?
+  },
+
   // Prismic
   prismic: {
     endpoint: 'https://mccarlos.cdn.prismic.io/api/v2',

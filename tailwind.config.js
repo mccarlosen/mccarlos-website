@@ -13,9 +13,10 @@ module.exports = {
       './nuxt.config.{js,ts}',
     ],
   },
-  whitelist: ['mode-dark'],
+  // whitelist: ['mode-dark'],
   darkMode: 'class',
   theme: {
+    darkSelector: '.dark',
     screens: {
       sm: '640px',
       // => @media (min-width: 640px) { ... }

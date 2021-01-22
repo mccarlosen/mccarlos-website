@@ -2,19 +2,22 @@
   <div class="h-full w-full font-body">
     <div class="container pb-24 pt-12 px-8 lg:px-24 xl:px-40 2xl:px-84">
       <header
-        class="flex flex-col justify-between items-center mb-16 md:flex-row"
-        :class="{ 'md:mb-24 lg:mb-32': !showLogo, 'lg:mb-16': showLogo }"
+        class="flex flex-col justify-between items-center mb-16 lg:flex-row"
+        :class="{
+          'md:mb-24 lg:mb-32': !showLogo,
+          'md:flex-col lg:mb-16': showLogo,
+        }"
       >
         <!-- nav -->
         <nav
           :class="[
-            'w-full flex items-center justify-end text-lg text-color-1 font-saira tracking-tighter mb-8 md:w-auto md:mb-0 dark:text-white',
+            'w-full flex items-center justify-end text-lg text-color-1 font-saira tracking-tighter mb-8 md:w-auto md:mb-6 dark:text-white lg:mb-0',
             { 'justify-between': showLogo },
           ]"
         >
           <NuxtLink to="/" title="Página de inicio">
             <img
-              v-if="showLogo"
+              v-if="$route.path !== '/'"
               src="../assets/images/logo-carlos-meneses-iniciales.svg"
               alt="Logo Iniciales Carlos Meneses"
               class="w-20 mr-5 md:mr-3 lg:mr-5 xl:mr-6 2xl:mr-7"
@@ -196,7 +199,7 @@
           Descargar CV
         </a> -->
         <button
-          v-if="!darkMode"
+          v-if="$colorMode.preference == 'light'"
           title="Modo nocturno"
           class="focus:outline-none"
           @click.prevent="toggleDarkMode"
@@ -260,22 +263,26 @@
 </template>
 
 <script>
-if (
-  localStorage.theme === 'mode-dark' ||
-  (!('theme' in localStorage) &&
-    window.matchMedia('(prefers-color-scheme: mode-dark)').matches)
-) {
-  document.querySelector('html').classList.add('mode-dark')
-} else {
-  document.querySelector('html').classList.remove('mode-dark')
-}
 export default {
   data() {
     return {
       darkMode: false,
-      showLogo: false,
+      showFullLogo: false,
       openMenu: false,
     }
+  },
+  computed: {
+    showLogo: {
+      get() {
+        if (this.$route.path !== '/') {
+          return true
+        }
+        return false
+      },
+      set(value) {
+        this.showFullLogo = value
+      },
+    },
   },
   watch: {
     $route() {
@@ -297,17 +304,9 @@ export default {
   },
   mounted() {
     // check theme
-    /* if (
-      localStorage.theme === 'mode-dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: mode-dark)').matches)
-    ) {
+    if (this.$colorMode.preference === 'dark') {
       this.darkMode = true
-      document.querySelector('html').classList.add('mode-dark')
-    } else {
-      this.darkMode = false
-      document.querySelector('html').classList.remove('mode-dark')
-    } */
+    }
     // check principal route
     if (this.$route.path !== '/') {
       this.showLogo = true
@@ -320,11 +319,9 @@ export default {
     toggleDarkMode() {
       this.darkMode = !this.darkMode
       if (this.darkMode) {
-        document.querySelector('html').classList.add('mode-dark')
-        localStorage.setItem('theme', 'mode-dark')
+        this.$colorMode.preference = 'light'
       } else {
-        document.querySelector('html').classList.remove('mode-dark')
-        localStorage.removeItem('theme')
+        this.$colorMode.preference = 'dark'
       }
     },
   },

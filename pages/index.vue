@@ -3,6 +3,8 @@
     <img
       src="../assets/images/logo-carlos-meneses-iniciales.svg"
       alt="Logo Iniciales Carlos Meneses"
+      width="116"
+      height="112"
       class="mb-8"
     />
     <div class="text-left">
