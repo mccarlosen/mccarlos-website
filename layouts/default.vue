@@ -260,6 +260,15 @@
 </template>
 
 <script>
+if (
+  localStorage.theme === 'mode-dark' ||
+  (!('theme' in localStorage) &&
+    window.matchMedia('(prefers-color-scheme: mode-dark)').matches)
+) {
+  document.querySelector('html').classList.add('mode-dark')
+} else {
+  document.querySelector('html').classList.remove('mode-dark')
+}
 export default {
   data() {
     return {
@@ -288,7 +297,7 @@ export default {
   },
   mounted() {
     // check theme
-    if (
+    /* if (
       localStorage.theme === 'mode-dark' ||
       (!('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: mode-dark)').matches)
@@ -298,7 +307,7 @@ export default {
     } else {
       this.darkMode = false
       document.querySelector('html').classList.remove('mode-dark')
-    }
+    } */
     // check principal route
     if (this.$route.path !== '/') {
       this.showLogo = true
