@@ -204,7 +204,10 @@
           Descargar CV
         </a> -->
         <button
-          v-if="$colorMode.preference == 'light'"
+          v-if="
+            $colorMode.preference == 'light' ||
+            $colorMode.preference == 'system'
+          "
           title="Modo nocturno"
           class="focus:outline-none"
           @click.prevent="toggleDarkMode"
