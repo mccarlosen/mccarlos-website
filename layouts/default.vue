@@ -324,8 +324,6 @@ export default {
       const categories = await this.$prismic.api.query([
         this.$prismic.predicates.at('document.type', 'category'),
       ])
-      // eslint-disable-next-line
-      console.log(categories)
       this.categories = categories
     },
     toggleOpen() {
