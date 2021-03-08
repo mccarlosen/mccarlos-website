@@ -107,10 +107,10 @@ export default {
   },
   // Google Analytics
   googleAnalytics: {
-    id: 'G-1LMPPWEYNE',
-    debug: {
-      sendHitTask: process.env.NODE_ENV !== 'development',
-    },
+    id: 'UA-187795411-1',
+    // debug: {
+    //   sendHitTask: process.env.NODE_ENV !== 'development',
+    // },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
