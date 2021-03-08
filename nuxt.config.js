@@ -107,7 +107,7 @@ export default {
   },
   // Google Analytics
   googleAnalytics: {
-    id: 'G-1LMPPWEYNE',
+    id: '259597128',
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

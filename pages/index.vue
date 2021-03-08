@@ -22,15 +22,15 @@
       >{{ home.subtitle[0].text }}</span
     >
     <div
-      class="flex flex-wrap justify-center font-saira font-medium mb-4 lg:mb-5"
+      class="flex flex-wrap justify-between font-saira font-medium mb-4 lg:mb-5"
     >
       <NuxtLink
         v-for="(cat, id) in categories.results"
         :key="id"
         :to="`/categorias/${cat.uid}`"
         :class="[
-          'block text-color-3 uppercase text-sm leading-12 md:text-base lg:text-lg',
-          { 'ml-6': id > 0 },
+          'hidden sm:block text-color-3 uppercase text-sm leading-12 md:text-base lg:text-lg',
+          { 'ml-2': id > 0 },
         ]"
       >
         #{{ cat.data.text }}
@@ -43,7 +43,7 @@
     </p>
     <NuxtLink
       to="/acerca-de-mi"
-      class="flex justify-between items-center font-saira font-semibold text-color-5 bg-color-6 border border-color-7 rounded-full px-4 py-2"
+      class="flex justify-between items-center font-saira font-semibold text-color-5 bg-color-6 border border-color-7 transition duration-200 ease-in-out hover:bg-black hover:border-opacity-50 rounded-full px-4 py-2"
     >
       Saber más &nbsp;
       <svg
